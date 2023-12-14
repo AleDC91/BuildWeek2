@@ -11869,6 +11869,8 @@ textarea.form-control-lg {
 }
 
 .sidebar {
+  border-radius: 15px;
+  border: 4px solid white;
   background-color: #121212;
   position: fixed;
   top: 0;
@@ -11933,4 +11935,8 @@ textarea.form-control-lg {
   position: relative;
   list-style: none;
   transition: all 0.4s ease;
+}
+
+.bo {
+  border-radius: 15px;
 }/*# sourceMappingURL=style.css.map */
