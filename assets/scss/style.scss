@@ -1,9 +1,5 @@
-@use "override_bootstrap";
+@import "override_bootstrap";
 
-// CSS custom
-// ----------
-
-
-h1{
-    color: red
-}
+@import "home_page";
+@import "album";
+@import "artist";

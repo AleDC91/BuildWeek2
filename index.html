@@ -1,14 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify Clone</title>
-    <meta name="description" content="clone di Spotify">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="clone di Spotify" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/home_page.js"></script>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-sidebar">
+        <div class="left-sidebar-top">
+          <div class="home-btn"></div>
+          <div class="search-btn"></div>
+        </div>
 
-</body>
+        <div class="left-sidebar-bottom">
+          <div class="left-sidebar-bottom-header">
+            <div class="library-btns">
+              <div class="library-toggle"></div>
+              <div class="create-playlist"></div>
+            </div>
+
+            <div class="library-settings">
+              <div class="library-filter"></div>
+              <div class="library-search"></div>
+            </div>
+          </div>
+
+          <table class="playlists-table">
+            <thead>
+              <tr>
+                <th>Titolo</th>
+                <th>Data di aggiunta</th>
+                <th>Riprodotto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- genera dinamicamente -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="main-head">
+          <div class="main-head-left"></div>
+          <div class="main-head-right"></div>
+        </div>
+
+        <div class="main-body">
+          <div class="sponsored playlist"></div>
+
+          <div class="playlists-container">
+
+            <div class="playlists playlists-create-per-te">
+              <div>
+                <a href="#" class="playlists-name"> Create per te </a>
+                <a class="show-all">Mostra tutto</a>
+              </div>
+              <div class="playlist-cards-container"></div>
+            </div>
+
+            <div class="playlists playlists-ascoltate-di-recente">
+              <div>
+                <a href="#" class="playlists-name"> Ascoltate di recente </a>
+                <a class="show-all">Mostra tutto</a>
+              </div>
+              <div class="playlist-cards-container"></div>
+            </div>
+
+            <div class="playlists playlists-stazioni-per-te">
+              <div>
+                <a href="#" class="playlists-name"> Stazioni per te </a>
+                <a class="show-all">Mostra tutto</a>
+              </div>
+              <div class="playlist-cards-container"></div>
+            </div>
+
+            <div class="playlists playlists-daily-mix">
+              <div>
+                <a href="#" class="playlists-name"> Daily mix</a>
+                <a class="show-all">Mostra tutto</a>
+              </div>
+              <div class="playlist-cards-container"></div>
+            </div>
+
+            <div class="playlists playlists-nuove-uscite">
+              <div>
+                <a href="#" class="playlists-name"> Nuove uscite </a>
+                <a class="show-all">Mostra tutto</a>
+              </div>
+              <div class="playlist-cards-container"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="right-sidebar"></div>
+    </div>
+  </body>
 </html>
