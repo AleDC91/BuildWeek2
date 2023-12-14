@@ -9,44 +9,64 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/home_page.js"></script>
   </head>
-  <body class="bg-dark">
-
-    
-    <div class="container">
-        <div class="row">
-          <div class="col-6 bg-primary text-white border border-dark p-3">
-            Home
-          </div>
-          <div class="col-6 bg-primary text-white border border-dark p-3">
-            Seconda colonna
-          </div>
-          <div class="col-6 bg-primary text-white border border-dark p-3">
-            Terza colonna
-          </div>
-        </div>
-      </div>
-      <div>
-  <div class="sidebar close">
-    <div class="logo-details d-flex align-items-center">
-      <img src="node_modules/bootstrap-icons/icons/house.svg " class=" logo-details align-items-center"  />
-      <span class="logo_name ">Home</span>
+  <body class=" m-5">
+        <div class="container m-5">
+  <div class="sidebar close ">
+    <div class="home-search  ">
+    <div class="logo-details d-flex align-items-center ">
+      <img src="node_modules/bootstrap-icons/icons/house.svg " class=" logo-details "  />
+      <span class="logo_name  ">Home</span>
     </div>
     <div class="logo-details align-items-center">
-    <img src="node_modules/bootstrap-icons/icons/search.svg" class=" logo-details align-items-center "  />
+    <img src="node_modules/bootstrap-icons/icons/search.svg" class=" logo-details  " />
     <span class="logo_name ">Cerca</span>
-  </div>
-<div class="bg-dark">
-    <div class="bo"></div>
-    <ul class="nav-links ">
-      <div class="logo-details align-items-center">
-        <img src="node_modules/bootstrap-icons/icons/book.svg" class=" logo-details bx bx-menu align-items-center "  />
-        <span class="logo_name">Libreria</span></div>
-        <span class="logo_name"> <li >vaffaculoooo</li></span>
-      <li>djdjdj</li>
-      <li>ajejejej</li>
- 
-    </ul></div>
+  </div>  
+</div>
+<div class="libreria-round ">
+  <ul class="nav-links rounded-top ">
+    <div class="logo-details  ">
+      
+      <img src="node_modules/bootstrap-icons/icons/book.svg" class=" logo-details bx bx-menu"  />
+      <span class="logo_name ">La tua Libreria</span>
+      
     
+    </div>
+      <span class="logo_name"> 
+        <li >vaffaculoooo</li></span>
+    <li>djdjdj</li>
+    <li>ajejejej</li><li >vaffaculoooo</li></span>
+    <li>djdjdj</li>
+    <li>ajejejej</li><li >vaffaculoooo</li></span>
+    <li>djdjdj</li>
+    <li>ajejejej</li><li >vaffaculoooo</li></span>
+    <li>djdjdj</li>
+    <li>ajejejej</li><li >vaffaculoooo</li></span>
+    <li>djdjdj</li>
+    <li>ajejejej</li><li >vaffaculoooo</li></span>
+    <li>djdjdj</li>
+    <li>ajejejej</li><li >vaffaculoooo</li></span>
+    <li>djdjdj</li>
+    <li>ajejejej</li><li >vaffaculoooo</li></span>
+    <li>djdjdj</li>
+    <li>ajejejej</li><li >vaffaculoooo</li></span>
+    <li>djdjdj</li>
+    <li>ajejejej</li><li >vaffaculoooo</li></span>
+    <li>djdjdj</li>
+    <li>ajejejej</li><li >vaffaculoooo</li></span>
+    <li>djdjdj</li>
+    <li>ajejejej</li><li >vaffaculoooo</li></span>
+    <li>djdjdj</li>
+    <li>ajejejej</li><li >vaffaculoooo</li></span>
+    <li>djdjdj</li>
+    <li>ajejejej</li>
+
+  </ul></div>
+</div>
+</div>
+  
+   
+
+
 
   
   <section class="home-section">
@@ -62,21 +82,15 @@
 
 
   <script>
-  let arrow = document.querySelectorAll(".arrow");
-  for (var i = 0; i < arrow.length; i++) {
-    arrow[i].addEventListener("click", (e)=>{
-   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
-   arrowParent.classList.toggle("showMenu");
+    
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", ()=>{
+      sidebar.classList.toggle("close");
     });
-  }
-  let sidebar = document.querySelector(".sidebar");
-  let sidebarBtn = document.querySelector(".bx-menu");
-  console.log(sidebarBtn);
-  sidebarBtn.addEventListener("click", ()=>{
-    sidebar.classList.toggle("close");
-  });
-  </script>
-
+    </script>
+  
 
 
 
