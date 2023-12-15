@@ -37,11 +37,10 @@
   }
   
   .sidebar-sx {
-    transition: all 0.3s ease;
+    // transition: all 0.3s ease;
   }
   .sidebar-retracted {
-  
-    width: 120px; /* Regola la larghezza desiderata quando la sidebar è retracted */
+    width: 120px !important; /* Regola la larghezza desiderata quando la sidebar è retracted */
   }
   
   
@@ -130,4 +129,12 @@
   span {
     height: 6px !important;
   }
+}
+
+// sidebar width control
+
+.sidebar-sx-width-control{
+  width: 10px;
+  height: 700px;
+  background-color: red;
 }
