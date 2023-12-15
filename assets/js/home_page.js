@@ -31,4 +31,49 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleIconRight.style.display = 'none';
 
   });
-});                  
+});
+
+let closeBtn = document.querySelector('.close-btn')
+let friendsBtn = document.querySelector('#friends-btn')
+
+let main = document.querySelector('.main')
+let cards = document.querySelectorAll('.card')
+
+main.addEventListener('mousemove', () => {
+    cards.forEach(card => {
+        card.parentNode.className = ''
+        if(main.offsetWidth < 576) {
+            card.parentNode.classList.add('col-12')
+        }
+    
+        else if(main.offsetWidth >= 576 && main.offsetWidth < 767) {
+            card.parentNode.classList.add('col-6')
+        }
+    
+        else if(main.offsetWidth >= 768 && main.offsetWidth < 992) {
+            card.parentNode.classList.add('col-4')
+        }
+    
+        else if(main.offsetWidth >= 993 && main.offsetWidth < 1200) {
+            card.parentNode.classList.add('col-3')
+        }
+    
+        else if(main.offsetWidth > 1200) {
+            card.parentNode.classList.add('col-2')
+        }
+    })
+})
+
+closeBtn.addEventListener('click', closeCustomNav)
+friendsBtn.addEventListener('click', openCustomNav)
+
+
+
+
+function openCustomNav() {
+    document.getElementById("myCustomSidebar").style.width = "250px"
+  }
+
+  function closeCustomNav() {
+    document.getElementById("myCustomSidebar").style.width = "0"
+}

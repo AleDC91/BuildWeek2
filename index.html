@@ -7,7 +7,7 @@
     <meta name="description" content="clone di Spotify" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js ms-2"></script>
-    <script src="assets/js/home_page.js"></script>
+    <script src="assets/js/home_page.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -282,6 +282,7 @@
         </div>
       </div>
       <!-- sidebar sx fine -->
+      
       <!--Inizio Main-->
       <div class="main">
         <div
@@ -335,7 +336,7 @@
                 />
               </svg>
             </div>
-            <div class="main-head-right-btn">
+            <div class="main-head-right-btn" id="friends-btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -407,7 +408,7 @@
                 <a class="show-all">Mostra tutto</a>
               </div>
               <div class="playlist-cards-container row g-4">
-                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div>
                   <div class="card">
                     <img
                       src="assets/imgs/search/image-11.jpg"
@@ -541,6 +542,115 @@
         </div>
       </div>
       <!--Fine Main-->
+
+      <!-- sidebar dx -->
+      <style>
+        body {
+          font-family: "Lato", sans-serif;
+        }
+    
+        .customSidebar {
+          height: 100%;
+          width: 450px;
+          /* position: fixed; */
+          z-index: 1;
+          top: 0;
+          right: -250px;
+          background-color: #111;
+          overflow-x: hidden;
+          transition: 0.5s;
+        }
+    
+        .customSidebarLink {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+        }
+    
+        .customSidebarLink:hover {
+          color: #f1f1f1;
+        }
+    
+        .closeButton {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+        }
+    
+        .openButton {
+          font-size: 20px;
+          cursor: pointer;
+          background-color: #111;
+          color: white;
+          padding: 10px 15px;
+          border: none;
+          position: fixed;
+          top: 20px;
+          right: 20px;
+        }
+    
+        .openButton:hover {
+          background-color: #444;
+        }
+    
+        #mainContent {
+          transition: margin-right .5s;
+          padding: 16px;
+          margin-right: 250px;
+        }
+    
+        @media screen and (max-height: 450px) {
+          .customSidebar {
+            padding-top: 15px;
+          }
+    
+          .customSidebarLink {
+            font-size: 18px;
+          }
+        }
+      </style>
+    
+      <div id="myCustomSidebar" class="customSidebar">
+        <div class="sidebar-dx-header d-flex justify-content-between text-white">
+          <div class="sidebar-dx-header-left">
+            Attività amici
+          </div>
+
+          <div class="sidebar-dx-header-right d-flex">
+            <div class="add-friend">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-add" viewBox="0 0 16 16">
+                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4"/>
+              </svg>
+            </div>
+            <div class="close-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-dx-info text-white">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis quasi corporis ratione optio distinctio ut.
+        </div>
+        <div class="card-sidebar-dx d-flex align-items-center">
+          <div class="card-sidebar-dx-left text-white align-items-center justify-content-center rounded-circle mx-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"/>
+            </svg>
+          </div>
+          <div class="card-sidebar-dx-right text-white">
+            <span class="placeholder w-75 rounded-5"></span>
+            <span class="placeholder w-75 rounded-5"></span>
+            <span class="placeholder w-50 rounded-5"></span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

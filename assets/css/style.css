@@ -11965,4 +11965,26 @@ button > a {
 
 .card {
   margin-bottom: 300px;
+}
+
+/* Sidebar dx */
+.card-sidebar-dx {
+  width: 100%;
+}
+
+.card-sidebar-dx-left {
+  height: 60px;
+  width: 60px;
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-sidebar-dx-right {
+  width: 100px;
+  height: 40px;
+}
+.card-sidebar-dx-right span {
+  height: 6px !important;
 }/*# sourceMappingURL=style.css.map */
