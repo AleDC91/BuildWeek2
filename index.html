@@ -1,295 +1,542 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone</title>
+    <meta name="description" content="clone di Spotify" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/home_page.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spotify Clone</title>
-  <meta name="description" content="clone di Spotify" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/home_page.js"></script>
-</head>
-
-<body>
-   <div class="container m-5"> 
-    <!--Inizio Sidebar sinistra-->
-    <div class="sidebar close ">
-      <div class="home-search  ">
-        <div class="logo-details d-flex align-items-center ">
-          <img src="node_modules/bootstrap-icons/icons/house.svg " class=" logo-details " />
-          <span class="logo_name  ">Home</span>
-        </div>
-        <div class="logo-details align-items-center">
-          <img src="node_modules/bootstrap-icons/icons/search.svg" class=" logo-details  " />
-          <span class="logo_name ">Cerca</span>
-        </div>
-      </div>
-      <div class="libreria-round row">
-        <ul class="nav-links rounded-top ">
-          <div class="logo-details">
-
-            <img src="node_modules/bootstrap-icons/icons/book.svg" class=" logo-details bx bx-menu " />
-            <span class="logo_name ">La tua Libreria</span>
-
-
-          </div>
-
-          <div class="library-button row">
-            <button class="col-3 p-3">
-              Playlist
-            </button>
-            <button class="col-3 p-3 ">
-              Podcast e show
-            </button>
-            <button class="col-3 p-3">
-              Album
-            </button>
-            <button class="col-3 p-3">
-              Artisti
-            </button>
-          </div>
-
-
-
-
-          <span class="logo_name">
-            <li>vaffaculoooo</li>
-          </span>
-          <li>djdjdj</li>
-          <li>ajejejej</li>
-          <li>vaffaculoooo</li></span>
-          <li>djdjdj</li>
-          <li>ajejejej</li>
-          <li>vaffaculoooo</li></span>
-          <li>djdjdj</li>
-          <li>ajejejej</li>
-          <li>vaffaculoooo</li></span>
-          <li>djdjdj</li>
-          <li>ajejejej</li>
-          <li>vaffaculoooo</li></span>
-          <li>djdjdj</li>
-          <li>ajejejej</li>
-          <li>vaffaculoooo</li></span>
-          <li>djdjdj</li>
-          <li>ajejejej</li>
-          <li>vaffaculoooo</li></span>
-          <li>djdjdj</li>
-          <li>ajejejej</li>
-          <li>vaffaculoooo</li></span>
-          <li>djdjdj</li>
-          <li>ajejejej</li>
-          <li>vaffaculoooo</li></span>
-          <li>djdjdj</li>
-          <li>ajejejej</li>
-          <li>vaffaculoooo</li></span>
-          <li>djdjdj</li>
-          <li>ajejejej</li>
-          <li>vaffaculoooo</li></span>
-          <li>djdjdj</li>
-          <li>ajejejej</li>
-          <li>vaffaculoooo</li></span>
-          <li>djdjdj</li>
-          <li>ajejejej</li>
-          <li>vaffaculoooo</li></span>
-          <li>djdjdj</li>
-          <li>ajejejej</li>
-
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!--Fine Sidebar-->
-
-  <!--Inizio Main-->
-  <div class="main">
-    <div class="main-head d-flex justify-content-between align-items-center">
-      <div class="main-head-left d-flex">
-        <div class="historyButton">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-left" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-          </svg>
-        </div>
-        <div class="historyButton">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-          </svg>
-        </div>
-      </div>
-      <div class="main-head-right d-flex align-items-center">
-        <div class="premium">
-          Esplora Premium
-        </div>
-        <div class="main-head-right-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-bell" viewBox="0 0 16 16">
-            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
-          </svg>
-        </div>
-        <div class="main-head-right-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-people-fill" viewBox="0 0 16 16">
-            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
-          </svg>
-        </div>
-        <div class="main-head-right-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-person" viewBox="0 0 16 16">
-            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="main-body">
-      <div class="sponsored-playlist">
-        <div class="sponsored-playlist-photo">
-          <img src="assets/imgs/search/image-1.jpeg" alt="">
-        </div>
-        <div class="sponsored-playlist-info">
-          <div class="d-flex justify-content-between">
-            <span>Playlist</span>
-            <span class="">Sponsorizzato</span>
-          </div>
-          <div class="h1">
-            nuova generazione
-          </div>
-          <div>
-            La nuovissima musica Gen Z e le hit di domani. Aminci, NASKA, Gabriele Esposito e molti altri! 
-          </div>
-          <div>
-            <a href="#">Play</a>
-            <a href="#">Segui</a>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-              <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+  <body>
+    <div class="d-flex">
+      <!-- sidebar sx -->
+      <div class="sidebar-sx">
+        <div class="sidebar-home bg-dark rounded-3 text-white">
+          <div class="home d-flex align-items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-house-door"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"
+              />
             </svg>
+            <div>Home</div>
+          </div>
+          <div class="cerca d-flex align-items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              />
+            </svg>
+            <div>Search</div>
+          </div>
+        </div>
+        <div class="sidebar-sx-libreria">
+          <div class="sidebar-sx-libreria-head d-flex justify-content-between">
+            <div class="la-tua-libreria d-flex">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-collection"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"
+                />
+              </svg>
+              <div>La tua libreria</div>
+            </div>
+            <div class="add-playlist d-flex">
+              <div class="plus">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-plus-lg"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"
+                  />
+                </svg>
+              </div>
+              <div class="toggle"></div>
+              <div class="arrow">
+                <span class="left">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-left"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
+                    />
+                  </svg>
+                </span>
+                <span class="right">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="libreria-bottoni d-flex justify-content-between">
+            <div class="libreria-bottoni-sx d-flex">
+              <div class="libreria-bottone">
+                <a href="#">Playlist</a>
+              </div>
+              <div class="libreria-bottone">
+                <a href="#">Album</a>
+              </div>
+              <div class="libreria-bottone">
+                <a href="#">Artisti</a>
+              </div>
+            </div>
+            <div class="libreria-bottoni-dx d-flex">
+              <div class="bottoni-dx-search">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                  />
+                </svg>
+              </div>
+              <div class="bottoni-dx-recenti d-flex">
+                <div>Recenti</div>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-list-ul"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tabella">
+          <table class="playlists-table">
+            <thead>
+              <tr>
+                <th>Titolo</th>
+                <th>Data di aggiunta</th>
+                <th>Riprodotto</th>
+              </tr>
+            </thead>
+              <tbody class="tabella">
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+                <tr>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                  <td>vaffanculo</td>
+                </tr>
+
+              </tbody>
+          </table>
+        </div>
+        </div>
+      </div>
+      <!-- sidebar sx fine -->
+      <!--Inizio Main-->
+      <div class="main">
+        <div
+          class="main-head d-flex justify-content-between align-items-center"
+        >
+          <div class="main-head-left d-flex">
+            <div class="historyButton">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="#fff"
+                class="bi bi-chevron-left"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                />
+              </svg>
+            </div>
+            <div class="historyButton">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="#fff"
+                class="bi bi-chevron-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="main-head-right d-flex align-items-center">
+            <div class="premium">Esplora Premium</div>
+            <div class="main-head-right-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="#fff"
+                class="bi bi-bell"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6"
+                />
+              </svg>
+            </div>
+            <div class="main-head-right-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="#fff"
+                class="bi bi-people-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
+                />
+              </svg>
+            </div>
+            <div class="main-head-right-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="#fff"
+                class="bi bi-person"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-body">
+          <div class="sponsored-playlist">
+            <div class="sponsored-playlist-photo">
+              <img src="assets/imgs/search/image-1.jpeg" alt="" />
+            </div>
+            <div class="sponsored-playlist-info">
+              <div class="d-flex justify-content-between">
+                <span>Playlist</span>
+                <span class="">Sponsorizzato</span>
+              </div>
+              <div class="h1">nuova generazione</div>
+              <div>
+                La nuovissima musica Gen Z e le hit di domani. Aminci, NASKA,
+                Gabriele Esposito e molti altri!
+              </div>
+              <div>
+                <a href="#">Play</a>
+                <a href="#">Segui</a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-three-dots"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="playlists-container">
+            <div class="playlists playlists-create-per-te">
+              <div>
+                <a href="#" class="playlists-name"> Create per te </a>
+                <a class="show-all">Mostra tutto</a>
+              </div>
+              <div class="playlist-cards-container row g-4">
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                  <div class="card">
+                    <img
+                      src="assets/imgs/search/image-11.jpg"
+                      class="card-img-top img-fluid p-3"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                  <div class="card">
+                    <img
+                      src="assets/imgs/search/image-11.jpg"
+                      class="card-img-top img-fluid p-3"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                  <div class="card">
+                    <img
+                      src="assets/imgs/search/image-11.jpg"
+                      class="card-img-top img-fluid p-3"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                  <div class="card">
+                    <img
+                      src="assets/imgs/search/image-11.jpg"
+                      class="card-img-top img-fluid p-3"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                  <div class="card">
+                    <img
+                      src="assets/imgs/search/image-11.jpg"
+                      class="card-img-top img-fluid p-3"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                  <div class="card">
+                    <img
+                      src="assets/imgs/search/image-11.jpg"
+                      class="card-img-top img-fluid p-3"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="playlists playlists-ascoltate-di-recente">
+              <div>
+                <a href="#" class="playlists-name"> Ascoltate di recente </a>
+                <a class="show-all">Mostra tutto</a>
+              </div>
+              <div class="playlist-cards-container"></div>
+            </div>
+
+            <div class="playlists playlists-stazioni-per-te">
+              <div>
+                <a href="#" class="playlists-name"> Stazioni per te </a>
+                <a class="show-all">Mostra tutto</a>
+              </div>
+              <div class="playlist-cards-container"></div>
+            </div>
+
+            <div class="playlists playlists-daily-mix">
+              <div>
+                <a href="#" class="playlists-name"> Daily mix</a>
+                <a class="show-all">Mostra tutto</a>
+              </div>
+              <div class="playlist-cards-container"></div>
+            </div>
+
+            <div class="playlists playlists-nuove-uscite">
+              <div>
+                <a href="#" class="playlists-name"> Nuove uscite </a>
+                <a class="show-all">Mostra tutto</a>
+              </div>
+              <div class="playlist-cards-container"></div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="playlists-container ">
-        <div class="playlists playlists-create-per-te">
-          <div>
-            <a href="#" class="playlists-name"> Create per te </a>
-            <a class="show-all">Mostra tutto</a>
-          </div>
-          <div class="playlist-cards-container row g-4">
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-              <div class="card">
-                <img src="assets/imgs/search/image-11.jpg" class="card-img-top img-fluid p-3" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-              <div class="card">
-                <img src="assets/imgs/search/image-11.jpg" class="card-img-top img-fluid p-3" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-              <div class="card">
-                <img src="assets/imgs/search/image-11.jpg" class="card-img-top img-fluid p-3" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-              <div class="card">
-                <img src="assets/imgs/search/image-11.jpg" class="card-img-top img-fluid p-3" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-              <div class="card">
-                <img src="assets/imgs/search/image-11.jpg" class="card-img-top img-fluid p-3" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-              <div class="card">
-                <img src="assets/imgs/search/image-11.jpg" class="card-img-top img-fluid p-3" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="playlists playlists-ascoltate-di-recente">
-          <div>
-            <a href="#" class="playlists-name"> Ascoltate di recente </a>
-            <a class="show-all">Mostra tutto</a>
-          </div>
-          <div class="playlist-cards-container"></div>
-        </div>
-
-        <div class="playlists playlists-stazioni-per-te">
-          <div>
-            <a href="#" class="playlists-name"> Stazioni per te </a>
-            <a class="show-all">Mostra tutto</a>
-          </div>
-          <div class="playlist-cards-container"></div>
-        </div>
-
-        <div class="playlists playlists-daily-mix">
-          <div>
-            <a href="#" class="playlists-name"> Daily mix</a>
-            <a class="show-all">Mostra tutto</a>
-          </div>
-          <div class="playlist-cards-container"></div>
-        </div>
-
-        <div class="playlists playlists-nuove-uscite">
-          <div>
-            <a href="#" class="playlists-name"> Nuove uscite </a>
-            <a class="show-all">Mostra tutto</a>
-          </div>
-          <div class="playlist-cards-container"></div>
-        </div>
-      </div>
+      <!--Fine Main-->
     </div>
-  </div>
-  <!--Fine Main-->
-
-
-
-
-
-
-
-
-
-
-
-  <script>
-
-    let sidebar = document.querySelector(".sidebar");
-    let sidebarBtn = document.querySelector(".bx-menu");
-    console.log(sidebarBtn);
-    sidebarBtn.addEventListener("click", () => {
-      sidebar.classList.toggle("close");
-    });
-  </script>
-
-
-
-
-
-
-
-</body>
-
+  </body>
 </html>
