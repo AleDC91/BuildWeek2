@@ -6,20 +6,24 @@
     <title>Spotify Clone</title>
     <meta name="description" content="clone di Spotify" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js ms-2"></script>
     <script src="assets/js/home_page.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   </head>
 
-  <body>
-    <div class="d-flex">
+  <body >
+    
+    <div class="d-flex ">
       <!-- sidebar sx -->
-      <div class="sidebar-sx">
-        <div class="sidebar-home bg-dark rounded-3 text-white">
-          <div class="home d-flex align-items-center">
+      <div class="sidebar-sx ">
+        <div class="sidebar-home  rounded-4 text-white bg-dark mt-4 ">
+          <div class="home d-flex align-items-center ms-4 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="30"
+              height="30"
               fill="currentColor"
               class="bi bi-house-door"
               viewBox="0 0 16 16"
@@ -28,13 +32,13 @@
                 d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"
               />
             </svg>
-            <div>Home</div>
+            <div class="ms-4 fs-3">Home</div>
           </div>
-          <div class="cerca d-flex align-items-center">
+          <div class="cerca d-flex align-items-center ms-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="30"
+              height="30"
               fill="currentColor"
               class="bi bi-search"
               viewBox="0 0 16 16"
@@ -43,16 +47,16 @@
                 d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
               />
             </svg>
-            <div>Search</div>
+            <div class="ms-4  fs-3">Search</div>
           </div>
         </div>
-        <div class="sidebar-sx-libreria">
-          <div class="sidebar-sx-libreria-head d-flex justify-content-between">
-            <div class="la-tua-libreria d-flex">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+        <div class="sidebar-sx-libreria bg-dark rounded  mb-5 mt-2 ">
+          <div class="sidebar-sx-libreria-head d-flex justify-content-between text-white  mb-2">
+            <div class="la-tua-libreria d-flex mt-2 align-items-center ms-4">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg "
+                width="30"
+                height="30"
                 fill="currentColor"
                 class="bi bi-collection"
                 viewBox="0 0 16 16"
@@ -61,14 +65,14 @@
                   d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"
                 />
               </svg>
-              <div>La tua libreria</div>
+              <div class="text-white ms-4  fs-3" id="toggleSidebarBtn" >La tua libreria</div>
             </div>
-            <div class="add-playlist d-flex">
+            <div class="add-playlist d-flex mt-2">
               <div class="plus">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
+                  width="30"
+                  height="30"
                   fill="currentColor"
                   class="bi bi-plus-lg"
                   viewBox="0 0 16 16"
@@ -84,8 +88,8 @@
                 <span class="left">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="30"
+                    height="30"
                     fill="currentColor"
                     class="bi bi-arrow-left"
                     viewBox="0 0 16 16"
@@ -99,8 +103,8 @@
                 <span class="right">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="30"
+                    height="30"
                     fill="currentColor"
                     class="bi bi-arrow-right"
                     viewBox="0 0 16 16"
@@ -113,25 +117,25 @@
                 </span>
               </div>
             </div>
-          </div>
-          <div class="libreria-bottoni d-flex justify-content-between">
-            <div class="libreria-bottoni-sx d-flex">
-              <div class="libreria-bottone">
-                <a href="#">Playlist</a>
+          </div >
+          <div class="libreria-bottoni d-flex justify-content-between ">
+            <div class="libreria-bottoni-sx d-flex ">
+              <div class="libreria-bottone ">
+                <button class="rounded ms-4"><a href="#" >Playlist</a></button>
               </div>
-              <div class="libreria-bottone">
-                <a href="#">Album</a>
+              <div class="libreria-bottone ">
+                <button class="rounded ms-4"><a href="#" >Album</a></button>
               </div>
-              <div class="libreria-bottone">
-                <a href="#">Artisti</a>
+              <div class="libreria-bottone ">
+                <button class="rounded ms-4"> <a href="#" >Artisti</a></button>
               </div>
             </div>
             <div class="libreria-bottoni-dx d-flex">
               <div class="bottoni-dx-search">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
+                  width="30"
+                  height="30"
                   fill="currentColor"
                   class="bi bi-search"
                   viewBox="0 0 16 16"
@@ -146,8 +150,8 @@
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="30"
+                    height="30"
                     fill="currentColor"
                     class="bi bi-list-ul"
                     viewBox="0 0 16 16"
@@ -161,16 +165,16 @@
               </div>
             </div>
           </div>
-          <div class="tabella">
-          <table class="playlists-table">
-            <thead>
+          <div class="tabella  bg-dark">
+          <table class="playlists-table  bg-dark">
+            <thead class=" bg-dark">
               <tr>
                 <th>Titolo</th>
                 <th>Data di aggiunta</th>
                 <th>Riprodotto</th>
               </tr>
             </thead>
-              <tbody class="tabella">
+              <tbody class="tabella bg-dark">
                 <tr>
                   <td>vaffanculo</td>
                   <td>vaffanculo</td>
