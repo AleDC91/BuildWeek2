@@ -11992,8 +11992,8 @@ body {
 
 .tabella {
   color: white;
-  height: 700px;
-  overflow: auto;
+  max-height: 700px;
+  overflow-y: auto;
 }
 
 thead {
@@ -12010,6 +12010,18 @@ table {
 
 tbody {
   background-color: #121212;
+  vertical-align: top;
+}
+tbody td, tbody tr {
+  height: 50px;
+  margin: 10px 0;
+  vertical-align: top;
+}
+tbody tr {
+  margin-bottom: 5px !important;
+}
+tbody .data-aggiunta {
+  vertical-align: center;
 }
 
 button > a {
@@ -12023,6 +12035,12 @@ button > a {
 
 .sidebar-content {
   width: calc(100% - 3px);
+}
+
+.album-table-left .icona-album {
+  width: 50px;
+  height: 50px;
+  background-color: red;
 }
 
 /*Main*/
@@ -12176,8 +12194,15 @@ button > a {
   width: calc(100% - 3px);
 }
 
+.bars-placeholder {
+  height: 10px;
+  color: grey;
+  width: 70px;
+  z-index: 100;
+}
+
 .sidebar-sx-width-control {
-  width: 1px;
+  width: 2x;
   padding: 0 1px;
   height: 100%;
   cursor: col-resize;
@@ -12187,7 +12212,7 @@ button > a {
 }
 
 .sidebar-dx-width-control {
-  width: 1px;
+  width: 2px;
   padding: 0 1x;
   height: 100%;
   cursor: col-resize;

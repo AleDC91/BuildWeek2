@@ -161,3 +161,136 @@ function handleMouseMoveLeft(e) {
     }
   }
 }
+
+
+
+// ------ left sidebar albums
+// --- genera 15 album casuali e popola la sidebar di sx
+
+
+fillSidebarSx(119)
+fillSidebarSx(92)
+fillSidebarSx(1155242)
+fillSidebarSx(6168800)
+fillSidebarSx(412)
+fillSidebarSx(112133452)
+fillSidebarSx(6)
+fillSidebarSx(34)
+fillSidebarSx(343)
+fillSidebarSx(11)
+fillSidebarSx(96)
+fillSidebarSx(55)
+fillSidebarSx(45)
+fillSidebarSx(41)
+fillSidebarSx(764)
+fillSidebarSx(346)
+
+
+async function fillSidebarSx(artistId){
+let tBody = document.querySelector(".playlists-table tbody");
+  let tr = document.createElement("tr");
+  tr.classList.add("py-3")
+  // let randomId = numeroACaso();
+  let albums = await getArtistAlbums(artistId);
+  let artist = await getArtist(artistId);
+  // console.log(artist.id)
+  let album = albums[0];
+  // console.log(album);
+  tr.innerHTML = `
+  <td class="album-table-left m-3">
+  <div class="d-flex m-3">
+    <div class="icona-album me-2">
+    <img src="${album.cover_small}" />
+    </div>
+    <div class="song-info">
+      <div class="table-artista">${artist.name}</div>
+      <div>Artista</div>
+    </div>
+  </div>
+  </td>
+
+  <td class="data-aggiunta m-3">
+    <div class="h-100 d-flex align-items-center">2 giorni fa</div>
+  </td>
+  <td class="riprodotto m-3"></td>
+`
+
+tBody.appendChild(tr);
+
+}
+
+
+
+async function getArtist(artistId) {
+  const response = await fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`
+  );
+  const artist = await response.json();
+  // console.log(artist);
+  return artist;
+}
+
+async function getArtistTracklist(artistId) {
+    let tracks = [];
+    const artist = await getArtist(artistId);
+    // let morePages = true;
+
+    const response = await fetch(artist.tracklist);
+    let currentTracklist = await response.json();
+    tracks.push(...currentTracklist.data);
+    // console.log(currentTracklist.next)
+  
+    // while (morePages && currentTracklist.next) {
+    //   const nextPageResponse = await fetch(currentTracklist.next);
+    //   currentTracklist = await nextPageResponse.json();
+    //   tracks.push(...currentTracklist.data);
+    // }
+    // console.log(tracks);
+    return tracks;
+  }
+  
+
+
+
+getArtistAlbums(199);
+
+async function getArtistAlbums(artistId) {
+  const tracklist = await getArtistTracklist(artistId);
+  let albums = [];
+  // console.log(tracklist);
+  tracklist.forEach((track) => {
+    const albumId = track.album.id;
+    if (!albums.some((album) => album.id === albumId)) {
+      albums.push(track.album);
+    }
+  });
+  // console.log(albums);
+  return albums;
+}
+
+// getArtistAlbums(232)
+//   .then((albums) => albums.forEach((album) => console.log(album.cover)))
+//   .catch((err) => console.log(err));
+
+
+// async function getArtistSongsByPopularity(artistId){
+//     const tracklist = await getArtistTracklist(artistId);
+// }
+
+// getArtistTracklist(numeroACaso())
+
+
+const searchURL = "https://striveschool-api.herokuapp.com/api/deezer/search?q="
+let query = "CORPSE";
+search(query)
+
+async function search(query){
+    const response = await fetch(`${searchURL}/${query}`);
+    const data = await response.json();
+    console.log(data)
+}
+
+
+function numeroACaso(){
+  return Math.floor(Math.random() * 400) + 1
+}

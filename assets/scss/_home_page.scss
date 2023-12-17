@@ -8,14 +8,14 @@
   
   .sidebar-sx{
     width: 500px;
-  background-color: #121212;
+    background-color: #121212;
   }
   
   .tabella{
   
     color:white;
-    height: 700px;
-    overflow: auto;
+    max-height: 700px;
+    overflow-y: auto;
   }
   
   thead{
@@ -31,6 +31,19 @@
   }
   tbody{
     background-color: #121212;
+    vertical-align: top;
+    td, tr{
+      height: 50px;
+      margin: 10px 0;
+    vertical-align: top;
+    }
+
+    tr{
+      margin-bottom: 5px !important;
+    }
+    .data-aggiunta{
+      vertical-align: center;
+    }
   
   }
   
@@ -47,6 +60,19 @@
     width: calc(100% - 3px);
   }
   
+
+
+
+
+.album-table-left{
+  .icona-album{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+  }
+}
+
+
   
   /*Main*/  
   .container-fluid{display:flex;}
@@ -202,11 +228,12 @@
 width: calc(100% - 3px);
 }
 
-// .bars-placeholder{
-//   height: 10px;
-//   color: grey;
-//   width: 70px;
-// }
+.bars-placeholder{
+  height: 10px;
+  color: grey;
+  width: 70px;
+  z-index: 100;
+}
 
 
 
@@ -217,7 +244,7 @@ width: calc(100% - 3px);
 // sidebar width control
 
 .sidebar-sx-width-control{
-  width: 1px;
+  width: 2x;
   padding: 0 1px;
   height: 100%;
   // background-color: red;
@@ -228,7 +255,7 @@ width: calc(100% - 3px);
 }
 
 .sidebar-dx-width-control{
-  width: 1px;
+  width: 2px;
   padding: 0 1x;
   height: 100%;
   // background-color: rgb(0, 255, 68);
