@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+// sidebar dx
 let closeBtn = document.querySelector('.close-btn')
 let friendsBtn = document.querySelector('#friends-btn')
 
@@ -40,7 +42,10 @@ let main = document.querySelector('.main')
 let cards = document.querySelectorAll('.card')
 
 document.addEventListener('mousemove', responsiveCards);
-window.addEventListener('resize', responsiveCards)
+window.addEventListener('resize', responsiveCards);
+document.addEventListener('click', responsiveCards);
+window.addEventListener('load', responsiveCards);
+
 
 closeBtn.addEventListener('click', closeCustomNav)
 friendsBtn.addEventListener('click', openCustomNav)
@@ -49,7 +54,7 @@ friendsBtn.addEventListener('click', openCustomNav)
 
 
 function openCustomNav() {
-    document.getElementById("myCustomSidebar").style.width = "250px"
+    document.getElementById("myCustomSidebar").style.width = "350px"
   }
 
   function closeCustomNav() {
@@ -81,26 +86,78 @@ function responsiveCards(){
 })
 }
 
-
-
 // left sidebar width control
-let leftWidthControl = document.querySelector(".sidebar-sx-width-control");
-let leftSidebar = document.querySelector('.sidebar-sx');
-let isResizing = false;
+const leftWidthControl = document.querySelector('.sidebar-sx-width-control');
+const sidebarSx = document.querySelector('.sidebar-sx');
+// const sidebarDx = document.querySelector('#myCustomSidebar');
 
-leftWidthControl.addEventListener('mousedown', (event) => {
-    isResizing = true;
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', () => {
-        isResizing = false;
-        document.removeEventListener('mousemove', handleMouseMove);
-    });
+
+let leftIsDragging = false;
+let leftInitialX;
+let sidebarSxInitialWidth = sidebarSx.offsetWidth;
+
+leftWidthControl.addEventListener('mousedown', (e) => {
+  leftIsDragging = true;
+  leftInitialX = e.clientX;
+  sidebarSxInitialWidth = sidebarSx.offsetWidth;
+
+  document.addEventListener('mousemove', handleMouseMoveLeft);
+  document.addEventListener('mouseup', () => {
+    leftIsDragging = false;
+    document.removeEventListener('mousemove', handleMouseMoveLeft);
+  });
 });
 
-function handleMouseMove(event) {
-    if (isResizing) {
-        const newWidth = event.clientX;
-        console.log(newWidth)
-        leftSidebar.style.width = `${newWidth}px`;
+function handleMouseMoveLeft(e) {
+  if (leftIsDragging) {
+    const leftMouseX = e.clientX;
+    const deltaX = leftMouseX - leftInitialX;
+
+    if (deltaX > 0) {
+      if(leftMouseX > 119 && leftMouseX < 320){
+        sidebarSx.classList.add('sidebar-retracted');
+      }
+      if(leftMouseX > window.innerWidth / 2){
+        closeCustomNav();
+        return;
+      }
+      // console.log('Il mouse si sta muovendo verso dx');
+      const sidebarSxWidth = sidebarSxInitialWidth + deltaX;
+      sidebarSx.style.width = sidebarSxWidth + 'px';
+      sidebarSx.style.flexGrow = "1";
+      sidebarSx.style.flexShrink = "0";
+      // main.style.flexGrow = "0";
+      // main.style.flexShrink = "1";
+      sidebarDx.style.flexGrow = "0";
+      sidebarDx.style.flexShrink = "0";
+      leftInitialX = sidebarSxWidth;
+
+
+
+    } else if (deltaX < 0) {
+      if(leftMouseX < window.innerWidth / 3){
+        openCustomNav();
+      }
+      if(leftMouseX < 320 && leftMouseX > 120){
+        sidebarSx.style.width = '320px';
+        return
+      }
+      if(leftMouseX < 120){
+        sidebarSx.classList.add('sidebar-retracted');
+        return;
+      }
+     
+      // console.log('Il mouse si sta muovendo verso sx');
+      const sidebarSxWidth = sidebarSxInitialWidth + deltaX;
+      sidebarSx.style.width = sidebarSxWidth + 'px';
+      sidebarSx.style.flexGrow = "0";
+      sidebarSx.style.flexShrink = "1";
+      // main.style.flexGrow = "1"
+      // main.style.flexShrink = "0";
+      sidebarDx.style.flexGrow = "0";
+      sidebarDx.style.flexShrink = "0";
+      leftInitialX = sidebarSxWidth;
+
     }
+  }
 }

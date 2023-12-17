@@ -1,7 +1,10 @@
 *{font-family: 'Montserrat', sans-serif;
 
   font-size:16px}
-  
+
+  body{
+    font-family: "Lato", sans-serif;
+  }
   
   .sidebar-sx{
     width: 500px;
@@ -36,11 +39,12 @@
     color:black;
   }
   
-  .sidebar-sx {
-    // transition: all 0.3s ease;
-  }
+
   .sidebar-retracted {
     width: 120px !important; /* Regola la larghezza desiderata quando la sidebar è retracted */
+  }
+  .sidebar-content{
+    width: calc(100% - 3px);
   }
   
   
@@ -131,10 +135,110 @@
   }
 }
 
+
+
+
+.customSidebar {
+  height: 100%;
+  width: 350px;
+  background-color: #111;
+  flex-shrink: 0;
+}
+
+.customSidebarLink {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.customSidebarLink:hover {
+  color: #f1f1f1;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openButton {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.openButton:hover {
+  background-color: #444;
+}
+
+#mainContent {
+  transition: margin-right 0.5s;
+  padding: 16px;
+  margin-right: 250px;
+}
+
+@media screen and (max-height: 450px) {
+  .customSidebar {
+    padding-top: 15px;
+  }
+
+  .customSidebarLink {
+    font-size: 18px;
+  }
+}
+
+.sidebar-dx-content{
+width: calc(100% - 3px);
+}
+
+// .bars-placeholder{
+//   height: 10px;
+//   color: grey;
+//   width: 70px;
+// }
+
+
+
+
+
+
+
 // sidebar width control
 
 .sidebar-sx-width-control{
-  width: 10px;
-  height: 700px;
-  background-color: red;
+  width: 1px;
+  padding: 0 1px;
+  height: 100%;
+  // background-color: red;
+  cursor: col-resize;
+  &:hover{
+    background-color: grey;
+  }
+}
+
+.sidebar-dx-width-control{
+  width: 1px;
+  padding: 0 1x;
+  height: 100%;
+  // background-color: rgb(0, 255, 68);
+  &:hover{
+    background-color: grey;
+  }
+  cursor: col-resize;
+
+}
+
+.general-container{
+  max-width: 100vw !important;
 }
