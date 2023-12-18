@@ -433,13 +433,9 @@ async function fillMainAlbum(artistId) {
 document.addEventListener("DOMContentLoaded", function () {
   var altezzaBrowser = window.outerHeight;
   var altezzaViewport = window.innerHeight;
-
-  // Calcola l'altezza effettiva del viewport senza la barra del browser
   var altezzaEffettiva = altezzaViewport - (altezzaBrowser - altezzaViewport);
 
-  // Imposta un'altezza fissa per l'elemento html
   document.documentElement.style.height = altezzaEffettiva + "px";
-
   // Rimuovi margini e padding dal body
   document.body.style.margin = "0";
   document.body.style.padding = "0";

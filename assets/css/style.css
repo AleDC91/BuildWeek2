@@ -12016,6 +12016,10 @@ body {
   color: white;
 }
 
+.tabella::-webkit-scrollbar {
+  opacity: 0;
+}
+
 thead {
   position: sticky;
   top: 0;

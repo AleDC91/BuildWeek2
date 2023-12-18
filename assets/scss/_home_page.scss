@@ -29,6 +29,7 @@ body {
   // max-height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+
 }
 .libreria-bottoni-dx {
   div {
@@ -37,6 +38,10 @@ body {
       color: white;
     }
   }
+}
+
+.tabella::-webkit-scrollbar{
+  opacity: 0;
 }
 
 thead {
@@ -272,6 +277,7 @@ button > a {
   width: 350px;
   background-color: #121212;
   flex-shrink: 0;
+  
 }
 
 .customSidebarLink {
