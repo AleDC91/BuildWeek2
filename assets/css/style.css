@@ -11981,6 +11981,14 @@ textarea.form-control-lg {
   font-size: 14px;
 }
 
+*::-moz-selection {
+  background-color: initial;
+}
+
+*::selection {
+  background-color: initial;
+}
+
 html {
   height: 100%;
 }
@@ -12466,4 +12474,86 @@ button > a {
 
 .general-container {
   max-width: 100vw !important;
+}
+
+.player {
+  padding: 0 2rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: black;
+}
+.player .right-player:hover {
+  cursor: pointer;
+}
+.player .left-player {
+  height: 90%;
+}
+.player .left-player img {
+  height: 100%;
+}
+.player .left-player .player-artist {
+  color: #b3b3b3;
+}
+.player .left-player .player-heart {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+.player .central-player {
+  color: #b3b3b3;
+}
+.player .central-player svg {
+  cursor: pointer;
+}
+.player .central-player .progress-bar {
+  width: 600px;
+  height: 4px;
+  border-radius: 20px;
+  background-color: #b3b3b3;
+  margin: 0 1rem;
+}
+
+.progress-bar-container {
+  margin: 8px 0;
+}
+
+.volume-bar {
+  width: 100px;
+  height: 4px;
+  border-radius: 3rem;
+  background-color: white;
+}
+
+.buon-pomeriggio {
+  padding: 2em 1em;
+}
+
+.pomeriggio-titolo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.pomeriggio-album-container {
+  height: 50px;
+  width: 100%;
+  display: grid;
+  margin-bottom: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.pomeriggio-album-container .pomeriggio-album {
+  background-color: #2a2a2a;
+}
+.pomeriggio-album-container .pomeriggio-album img {
+  height: 50px;
+  width: 50px;
+  border-radius: 8px 0 0 8px;
+}
+.pomeriggio-album-container .pomeriggio-album .pomeriggio-artist {
+  color: white;
+  vertical-align: center;
+  font-weight: bold;
 }
