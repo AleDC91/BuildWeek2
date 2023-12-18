@@ -307,9 +307,15 @@ fillMainAlbum(112133452);
 
 
 document.addEventListener("mousemove", responsiveCards);
+window.addEventListener("mousemove", changeBuongiornoCol);
 window.addEventListener("resize", responsiveCards);
+window.addEventListener("resize", changeBuongiornoCol);
+
 document.addEventListener("click", responsiveCards);
+window.addEventListener("click", changeBuongiornoCol);
 window.addEventListener("load", responsiveCards);
+window.addEventListener("load", changeBuongiornoCol);
+
 
 async function fillSidebarSx(artistId) {
   let tBody = document.querySelector(".playlists-table tbody");
@@ -355,18 +361,9 @@ async function getArtist(artistId) {
 async function getArtistTracklist(artistId) {
   let tracks = [];
   const artist = await getArtist(artistId);
-  // let morePages = true;
-
   const response = await fetch(artist.tracklist);
   let currentTracklist = await response.json();
   tracks.push(...currentTracklist.data);
-  // console.log(currentTracklist.next)
-
-  // while (morePages && currentTracklist.next) {
-  //   const nextPageResponse = await fetch(currentTracklist.next);
-  //   currentTracklist = await nextPageResponse.json();
-  //   tracks.push(...currentTracklist.data);
-  // }
   console.log(tracks);
   return tracks;
 }
@@ -470,3 +467,34 @@ function resizeSiedbarSx(){
 }
 
 window.addEventListener("resize", resizeSiedbarSx)
+
+
+
+// player
+
+let playerHearts = document.querySelectorAll(".player-heart svg");
+console.log(playerHearts)
+playerHearts.forEach(heart => 
+  heart.addEventListener("click", () => {
+    console.log("click")
+    playerHearts.forEach(svg => {
+      svg.classList.toggle("d-none");
+    })
+  
+  })) 
+
+
+// buongiorno
+
+function changeBuongiornoCol(){
+  let buongiornoContainer = document.querySelector(".pomeriggio-album-container");
+  let main = document.querySelector(".main");
+  let mainWidth = main.offsetWidth;
+  buongiornoContainer.style.width = mainWidth;
+  if(mainWidth > 900){
+    buongiornoContainer.style.gridTemplateColumns = "repeat(4, 1fr)";
+  } else {
+    buongiornoContainer.style.gridTemplateColumns = "repeat(2, 1fr)";
+  }
+
+}
