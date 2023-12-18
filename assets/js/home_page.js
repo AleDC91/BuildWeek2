@@ -153,6 +153,7 @@ function closeCustomNav() {
 }
 
 function responsiveCards() {
+  let cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
     card.parentNode.className = "";
     if (main.offsetWidth < 576) {
