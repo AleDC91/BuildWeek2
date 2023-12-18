@@ -12018,6 +12018,10 @@ body {
 
 .tabella::-webkit-scrollbar {
   opacity: 0;
+  width: 3px;
+}
+.tabella::-webkit-scrollbar:hover {
+  opacity: 1;
 }
 
 thead {
@@ -12147,7 +12151,57 @@ button > a {
   font-size: 12px;
 }
 
+.playlists-name {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: white;
+  font-weight: bold;
+}
+.playlists-name + a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+}
+
 /*Main*/
+.playlists {
+  padding: 16px;
+  padding-top: 30px;
+}
+
+.mostra-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-head {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 10px 16px;
+}
+
+.card-title {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #b3b3b3;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.table-artista {
+  font-size: 14px;
+}
+.table-artista + div {
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
   display: flex;
 }
@@ -12159,6 +12213,16 @@ button > a {
   overflow-y: auto;
   overflow-x: hidden;
   margin: 0 16px;
+}
+
+.song-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-head-right-btn {
+  cursor: pointer;
 }
 
 .main::-webkit-scrollbar {
@@ -12182,6 +12246,7 @@ button > a {
   height: 2em;
   border-radius: 20px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .main-head-right-btn {
@@ -12194,12 +12259,11 @@ button > a {
 }
 
 .sponsored-playlist {
-  background: rgb(9, 10, 20);
-  background: linear-gradient(40deg, rgb(9, 10, 20) 34%, rgba(9, 10, 20, 0) 91%);
-  width: 100%;
-  max-width: 700px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(36deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 76%);
+  max-width: 1200px;
   margin: 0 auto;
-  height: 150px;
+  height: 250px;
   padding: 5px;
   display: flex;
   color: #fff;
@@ -12209,16 +12273,49 @@ button > a {
 }
 .sponsored-playlist .sponsored-playlist-photo img {
   height: 100%;
+  padding: 0.7rem;
+}
+
+.titolo-playlist-sponsor {
+  font-size: 3.5rem;
+  font-weight: bolder;
 }
 
 .playlist-cards-container {
-  height: 450px;
+  height: 350px;
   overflow: hidden;
+}
+
+.play, .segui {
+  height: 3.5rem;
+  padding: 16px 32px;
+  border-radius: 3rem;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 2rem;
+}
+
+.btns-container-play {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.play {
+  background-color: #1ed760;
+  color: black;
+}
+
+.segui {
+  color: white;
+  border: 1px solid #b3b3b3;
 }
 
 .card {
   margin-bottom: 300px;
   background-color: #181818;
+  min-height: 300px;
 }
 
 /* Sidebar dx */
@@ -12311,6 +12408,39 @@ button > a {
 .bars {
   height: 8px;
   background-color: #333333;
+}
+
+.sidebar-dx-info, .impostazioniTesto {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.impostazioniTesto {
+  margin-top: 20px;
+}
+
+.impostazioni-btn {
+  background-color: white;
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 2em;
+  color: black;
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.impostazioni-btn:hover {
+  scale: 1.05;
+}
+
+#wrapper-info-dx {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-top: 0;
 }
 
 .sidebar-sx-width-control {

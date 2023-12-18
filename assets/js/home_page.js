@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  resizeSiedbarSx();
   const sidebar = document.querySelector(".sidebar-sx");
   const toggleBtn = document.getElementById("toggleSidebarBtn");
   const toggleIconLeft = document.querySelector(".arrow .left");
@@ -157,13 +158,13 @@ function responsiveCards() {
   cards.forEach((card) => {
     card.parentNode.className = "";
     if (main.offsetWidth < 576) {
-      card.parentNode.classList.add("col-12");
-    } else if (main.offsetWidth >= 576 && main.offsetWidth < 767) {
-      card.parentNode.classList.add("col-6");
-    } else if (main.offsetWidth >= 768 && main.offsetWidth < 992) {
       card.parentNode.classList.add("col-4");
-    } else if (main.offsetWidth >= 993 && main.offsetWidth < 1200) {
+    } else if (main.offsetWidth >= 576 && main.offsetWidth < 767) {
+      card.parentNode.classList.add("col-4");
+    } else if (main.offsetWidth >= 768 && main.offsetWidth < 992) {
       card.parentNode.classList.add("col-3");
+    } else if (main.offsetWidth >= 993 && main.offsetWidth < 1200) {
+      card.parentNode.classList.add("col-2");
     } else if (main.offsetWidth > 1200) {
       card.parentNode.classList.add("col-2");
     }
@@ -412,17 +413,26 @@ function numeroACaso() {
 
 async function fillMainAlbum(artistId) {
   let cardsContainer = document.querySelector(".playlist-cards-container");
+  cardsContainer.classList.add("mt-1")
   let cardContainer = document.createElement("div");
   cardContainer.classList.add("col-6", "col-md-4", "col-lg-3", "col-xl-2");
   let albums = await getArtistAlbums(artistId);
   let album = albums[0];
+  let artist = await getArtist(artistId);
+  console.log(artist);
+  console.log(album.id)
   cardContainer.innerHTML = `
-    <div class="card">
-      <img src="${album.cover}" class="card-img-top img-fluid p-3" alt="..." />
-      <div class="card-body">
+      <div class="card rounded-4">
+      <div class="rounded-4 overflow-hidden p-4">
+          <a href="album.html?id=${album.id}">
+            <img src="${album.cover}" class="card-img-top img-fluid rounded-4" alt="${album.title}" />
+          </a>
+      </div>
+          <div class="card-body">
         <h5 class="card-title text-white">${album.title}</h5>
+        <a href="artist.html?id=${artist.id}"
         <p class="card-text">
-        cose a caso
+        ${artist.name}
         </p>
       </div>
     </div>
@@ -441,3 +451,22 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.style.margin = "0";
   document.body.style.padding = "0";
 });
+
+
+
+// altezza sidebar sx
+function resizeSiedbarSx(){
+  let container = document.querySelector(".general-container");
+  let libreria = document.querySelector(".sidebar-sx-libreria");
+  let tBody = document.querySelector(".tabella");
+  let containerHeight = container.offsetHeight;
+
+  console.log(containerHeight);
+  tBody.style.height = `${containerHeight - 270}px`
+  libreria.classList.add("rounded-4");
+  tBody.classList.add("rounded-4");
+
+ libreria.style.height = `${containerHeight - 150}px`
+}
+
+window.addEventListener("resize", resizeSiedbarSx)
