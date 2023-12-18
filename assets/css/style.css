@@ -11978,28 +11978,58 @@ textarea.form-control-lg {
 }
 * {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
+}
+
+html {
+  height: 100%;
 }
 
 body {
   font-family: "Lato", sans-serif;
+  font-size: 12px;
+  height: 100vh;
 }
 
 .sidebar-sx {
   width: 500px;
   background-color: #121212;
+  height: 100%;
 }
 
 .tabella {
   color: white;
-  max-height: 700px;
+  max-height: 670px;
   overflow-y: auto;
+  overflow-x: hidden;
+}
+.tabella .libreria-bottoni-dx {
+  color: #b3b3b3;
+  margin-bottom: -40px;
+  cursor: pointer;
+}
+
+.libreria-bottoni-dx div {
+  cursor: pointer;
+}
+.libreria-bottoni-dx div:hover {
+  color: white;
 }
 
 thead {
   position: sticky;
   top: 0;
-  background-color: #090a14;
+  background-color: #121212;
+  border-bottom: 1px solid #2a2a2a;
+  box-shadow: 0 5px 10px black;
+}
+thead th:first-child {
+  padding-left: 16px;
+}
+thead th {
+  font-size: 12px;
+  color: #b3b3b3;
+  padding-bottom: 8px;
 }
 
 table {
@@ -12012,7 +12042,8 @@ tbody {
   background-color: #121212;
   vertical-align: top;
 }
-tbody td, tbody tr {
+tbody td,
+tbody tr {
   height: 50px;
   margin: 10px 0;
   vertical-align: top;
@@ -12024,23 +12055,92 @@ tbody .data-aggiunta {
   vertical-align: center;
 }
 
+.add-playlist, .arrow .left, .add-friend, .close-btn {
+  cursor: pointer;
+}
+
 button > a {
   text-decoration: none;
   color: black;
 }
 
 .sidebar-retracted {
-  width: 120px !important; /* Regola la larghezza desiderata quando la sidebar è retracted */
+  width: 70px !important; /* Regola la larghezza desiderata quando la sidebar è retracted */
 }
 
 .sidebar-content {
   width: calc(100% - 3px);
+  background-color: black;
+  height: 100%;
+}
+
+.sidebar-home {
+  background-color: #111;
 }
 
 .album-table-left .icona-album {
   width: 50px;
   height: 50px;
-  background-color: red;
+}
+
+.sidebar-home {
+  color: #b3b3b3;
+  height: 108px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.sidebar-home .home,
+.sidebar-home .cerca {
+  cursor: pointer;
+}
+.sidebar-home .home div,
+.sidebar-home .cerca div {
+  padding-top: 5px;
+  font-size: 14px;
+}
+.sidebar-home .home:hover,
+.sidebar-home .cerca:hover {
+  color: white;
+}
+
+.sidebar-sx-libreria {
+  background-color: #111;
+  color: #b3b3b3;
+}
+.sidebar-sx-libreria-head {
+  padding: 15px 0 20px 0;
+}
+.sidebar-sx-libreria #toggleSidebarBtn {
+  cursor: pointer;
+}
+.sidebar-sx-libreria #toggleSidebarBtn div {
+  font-size: 14px;
+}
+.sidebar-sx-libreria #toggleSidebarBtn:hover {
+  color: white;
+}
+
+.libreria-bottoni {
+  margin-bottom: 16px;
+}
+
+.libreria-bottone button {
+  background-color: #232323;
+  border: none;
+}
+.libreria-bottone button:hover {
+  background-color: #303030;
+}
+.libreria-bottone button a {
+  color: white;
+  font-weight: bold;
+  font-size: 12px !important;
+  padding: 3px;
+}
+
+.bottoni-dx-recenti {
+  font-size: 12px;
 }
 
 /*Main*/
@@ -12050,9 +12150,15 @@ button > a {
 
 .main {
   width: 100%;
-  background-color: rgb(202, 202, 202);
-  height: 100vh;
-  overflow: auto;
+  background-color: #121212;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0 16px;
+}
+
+.main::-webkit-scrollbar {
+  opacity: 0;
 }
 
 .historyButton {
@@ -12108,17 +12214,20 @@ button > a {
 
 .card {
   margin-bottom: 300px;
+  background-color: #181818;
 }
 
 /* Sidebar dx */
 .card-sidebar-dx {
   width: 100%;
+  margin-top: 24px;
+  margin-left: 10px;
 }
 
 .card-sidebar-dx-left {
-  height: 60px;
-  width: 60px;
-  background-color: green;
+  height: 50px;
+  width: 50px;
+  background-color: #333333;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12135,7 +12244,7 @@ button > a {
 .customSidebar {
   height: 100%;
   width: 350px;
-  background-color: #111;
+  background-color: #121212;
   flex-shrink: 0;
 }
 
@@ -12192,19 +12301,19 @@ button > a {
 }
 .sidebar-dx-content {
   width: calc(100% - 3px);
+  color: #b3b3b3;
 }
 
-.bars-placeholder {
-  height: 10px;
-  color: grey;
-  width: 70px;
-  z-index: 100;
+.bars {
+  height: 8px;
+  background-color: #333333;
 }
 
 .sidebar-sx-width-control {
   width: 2x;
   padding: 0 1px;
   height: 100%;
+  background-color: black;
   cursor: col-resize;
 }
 .sidebar-sx-width-control:hover {

@@ -17,16 +17,18 @@
   </head>
 
   <body>
-    <div class="d-flex container-fluid general-container">
+    <div
+      class="d-flex container-fluid general-container w-100 h-100 bg-black p-4"
+    >
       <!-- sidebar sx -->
       <div class="sidebar-sx d-flex">
         <div class="sidebar-content">
-          <div class="sidebar-home rounded-4 text-white bg-dark mt-4">
+          <div class="sidebar-home rounded-4">
             <div class="home d-flex align-items-center ms-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
+                width="25"
+                height="25"
                 fill="currentColor"
                 class="bi bi-house-door"
                 viewBox="0 0 16 16"
@@ -35,13 +37,13 @@
                   d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"
                 />
               </svg>
-              <div class="ms-4 fs-3">Home</div>
+              <div id="homeScritta" class="ms-3 h-100 fw-bold">Home</div>
             </div>
             <div class="cerca d-flex align-items-center ms-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
+                width="25"
+                height="25"
                 fill="currentColor"
                 class="bi bi-search"
                 viewBox="0 0 16 16"
@@ -50,36 +52,55 @@
                   d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
                 />
               </svg>
-              <div class="ms-4 fs-3">Search</div>
+              <div id="cercaScritta" class="ms-3 fw-bold">Cerca</div>
             </div>
           </div>
-          <div class="sidebar-sx-libreria bg-dark rounded mb-5 mt-2">
+          <div class="fw-bold sidebar-sx-libreria rounded mb-5 mt-2">
             <div
-              class="sidebar-sx-libreria-head d-flex justify-content-between text-white mb-2"
+              class="sidebar-sx-libreria-head d-flex justify-content-between"
             >
-              <div class="la-tua-libreria d-flex mt-2 align-items-center ms-4">
+              <div
+                id="toggleSidebarBtn"
+                class="la-tua-libreria d-flex mt-2 align-items-center ms-4"
+              >
                 <svg
-                  xmlns="http://www.w3.org/2000/svg "
-                  width="30"
-                  height="30"
-                  fill="currentColor"
-                  class="bi bi-collection"
-                  viewBox="0 0 16 16"
+                  id="open-library-icon"
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="#b3b3b3"
+                  width="24"
+                  height="24"
+                  class="d-none"
                 >
                   <path
-                    d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"
-                  />
+                    d="M14.5 2.134a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866V21a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1V3a1 1 0 0 1 .5-.866zM16 4.732V20h4V7.041l-4-2.309zM3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zm6 0a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1z"
+                  ></path>
                 </svg>
-                <div class="text-white ms-4 fs-3" id="toggleSidebarBtn">
-                  La tua libreria
-                </div>
+                <svg
+                  id="collapsed-library-icon"
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="#b3b3b3"
+                  width="24"
+                  height="24"
+                  class=""
+                >
+                  <path
+                    d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                  ></path>
+                </svg>
+                <div id="libreriaScritta" class="ms-4">La tua libreria</div>
               </div>
               <div class="add-playlist d-flex mt-2">
                 <div class="plus">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
+                    width="20"
+                    height="20"
                     fill="currentColor"
                     class="bi bi-plus-lg"
                     viewBox="0 0 16 16"
@@ -91,12 +112,12 @@
                   </svg>
                 </div>
                 <div class="toggle"></div>
-                <div class="arrow">
+                <div class="arrow mx-3">
                   <span class="left">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="30"
-                      height="30"
+                      width="20"
+                      height="20"
                       fill="currentColor"
                       class="bi bi-arrow-left"
                       viewBox="0 0 16 16"
@@ -126,23 +147,27 @@
               </div>
             </div>
             <div class="libreria-bottoni d-flex justify-content-between">
-              <div class="libreria-bottoni-sx d-flex">
+              <div class="libreria-bottoni-sx d-flex ms-2">
                 <div class="libreria-bottone">
-                  <button class="rounded ms-4"><a href="#">Playlist</a></button>
+                  <button class="rounded-5 ms-2">
+                    <a href="#">Playlist</a>
+                  </button>
                 </div>
                 <div class="libreria-bottone">
-                  <button class="rounded ms-4"><a href="#">Album</a></button>
+                  <button class="rounded-5 ms-2"><a href="#">Album</a></button>
                 </div>
                 <div class="libreria-bottone">
-                  <button class="rounded ms-4"><a href="#">Artisti</a></button>
+                  <button class="rounded-5 ms-2">
+                    <a href="#">Artisti</a>
+                  </button>
                 </div>
               </div>
-              <div class="libreria-bottoni-dx d-flex">
+              <div class="libreria-bottoni-dx d-none me-3">
                 <div class="bottoni-dx-search">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
+                    width="20"
+                    height="20"
                     fill="currentColor"
                     class="bi bi-search"
                     viewBox="0 0 16 16"
@@ -152,15 +177,15 @@
                     />
                   </svg>
                 </div>
-                <div class="bottoni-dx-recenti d-flex">
-                  <div>Recenti</div>
+                <div class="bottoni-dx-recenti d-flex mx-3">
+                  Recenti
                   <div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="30"
-                      height="30"
+                      width="20"
+                      height="20"
                       fill="currentColor"
-                      class="bi bi-list-ul"
+                      class="bi bi-list-ul mx-3"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -172,37 +197,446 @@
                 </div>
               </div>
             </div>
-            <div class="tabella bg-dark">
-              <table class="playlists-table bg-dark">
-                <thead class="bg-dark">
+            <div class="tabella">
+              <table class="playlists-table">
+                <thead class="d-none">
                   <tr>
                     <th>Titolo</th>
                     <th>Data di aggiunta</th>
                     <th>Riprodotto</th>
                   </tr>
                 </thead>
-                <tbody class="tabella bg-dark">
-<!--                   
-                  <tr class="table-row-left">
-
-                    <td class="album-table-left">
-                      <div class="d-flex">
-                      <div class="icona-album"></div>
-                      <div class="song-info">
-                        <div class="table-artista">Nome Artista</div>
-                        <div>Artista</div>
+                <tbody class="tabella">
+                  <tr>
+                    <div
+                      class="libreria-bottoni-dx d-flex justify-content-between px-3"
+                    >
+                      <div class="bottoni-dx-search">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          fill="currentColor"
+                          class="bi bi-search"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                          />
+                        </svg>
+                      </div>
+                      <div class="bottoni-dx-recenti d-flex">
+                        Recenti
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            fill="currentColor"
+                            class="bi bi-list-ul"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                    </td>
-
-                    <td class="data-aggiunta">
-                      <div>2 giorni fa</div>
-                    </td>
-                    <td class="riprodotto"></td>
-
                   </tr>
-                  -->
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-14.jpg"
+                            class="img-fluid rounded-1 pb-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
 
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
+
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-11.jpg"
+                            class="img-fluid rounded-1 px-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-12.jpg"
+                            class="img-fluid rounded-1 pb-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-13.jpg"
+                            class="img-fluid rounded-1 pb-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-15.jpg"
+                            class="img-fluid rounded-1 pb-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-16.jpg"
+                            class="img-fluid rounded-1 pb-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-17.jpg"
+                            class="img-fluid rounded-1 pb-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-18.jpg"
+                            class="img-fluid rounded-1 pb-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-19.jpg"
+                            class="img-fluid rounded-1 pb-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-10.jpg"
+                            class="img-fluid rounded-1 pb-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-11.jpg"
+                            class="img-fluid rounded-1 pb-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-9.jpg"
+                            class="img-fluid rounded-1 pb-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-8.jpg"
+                            class="img-fluid rounded-1 pb-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-7.jpg"
+                            class="img-fluid rounded-1 pb-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-6.jpg"
+                            class="img-fluid rounded-1 pb-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-5.jpg"
+                            class="img-fluid rounded-1 pb-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
+                  <tr class="table-row-left">
+                    <td class="album-table-left">
+                      <div class="d-flex m-3 mb-0">
+                        <div class="icona-album me-2 rounded-2">
+                          <img
+                            src="assets/imgs/main/image-4.jpg"
+                            class="img-fluid rounded-1 pb-2"
+                          />
+                        </div>
+                        <div class="song-info">
+                          <div class="table-artista">bubu</div>
+                          <div>Artista</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="data-aggiunta m-3 d-none">
+                      <div class="h-100 d-flex align-items-center">
+                        2 giorni fa
+                      </div>
+                    </td>
+                    <td class="riprodotto m-3 d-none"></td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -213,7 +647,7 @@
       <!-- sidebar sx fine -->
 
       <!--Inizio Main-->
-      <div class="main">
+      <div class="main rounded-4">
         <div
           class="main-head d-flex justify-content-between align-items-center"
         >
@@ -336,104 +770,7 @@
                 <a href="#" class="playlists-name"> Create per te </a>
                 <a class="show-all">Mostra tutto</a>
               </div>
-              <div class="playlist-cards-container row g-4">
-                <div>
-                  <div class="card">
-                    <img
-                      src="assets/imgs/search/image-11.jpg"
-                      class="card-img-top img-fluid p-3"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card">
-                    <img
-                      src="assets/imgs/search/image-11.jpg"
-                      class="card-img-top img-fluid p-3"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card">
-                    <img
-                      src="assets/imgs/search/image-11.jpg"
-                      class="card-img-top img-fluid p-3"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card">
-                    <img
-                      src="assets/imgs/search/image-11.jpg"
-                      class="card-img-top img-fluid p-3"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card">
-                    <img
-                      src="assets/imgs/search/image-11.jpg"
-                      class="card-img-top img-fluid p-3"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="card">
-                    <img
-                      src="assets/imgs/search/image-11.jpg"
-                      class="card-img-top img-fluid p-3"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="playlist-cards-container row g-4"></div>
             </div>
 
             <div class="playlists playlists-ascoltate-di-recente">
@@ -477,18 +814,18 @@
         <div class="sidebar-dx-width-control"></div>
         <div class="sidebar-dx-content">
           <div
-            class="sidebar-dx-header d-flex justify-content-between text-white"
+            class="sidebar-dx-header d-flex justify-content-between p-2"
           >
-            <div class="sidebar-dx-header-left">Attività amici</div>
+            <div class="sidebar-dx-header-left fw-bold text-white">Attività amici</div>
 
             <div class="sidebar-dx-header-right d-flex">
               <div class="add-friend">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
+                  width="20"
+                  height="20"
                   fill="currentColor"
-                  class="bi bi-person-fill-add"
+                  class="bi bi-person-fill-add mx-3"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -502,8 +839,8 @@
               <div class="close-btn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
+                  width="20"
+                  height="20"
                   fill="currentColor"
                   class="bi bi-x"
                   viewBox="0 0 16 16"
@@ -515,13 +852,12 @@
               </div>
             </div>
           </div>
-          <div class="sidebar-dx-info text-white">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis
-            quasi corporis ratione optio distinctio ut.
+          <div class="sidebar-dx-info p-2 fw-bold">
+           Consenti ad amici e follower su Spotify di farsi gli affari tuoi
           </div>
           <div class="card-sidebar-dx d-flex align-items-center">
             <div
-              class="card-sidebar-dx-left text-white align-items-center justify-content-center rounded-circle mx-2"
+              class="card-sidebar-dx-left align-items-center justify-content-center rounded-circle mx-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -536,10 +872,64 @@
                 />
               </svg>
             </div>
-            <div class="card-sidebar-dx-right text-white">
-              <div class="bars-placeholder w-75 rounded-5"></div>
-              <div class="bars-placeholder w-75 rounded-5"></div>
-              <div class="bars-placeholder w-75 rounded-5"></div>
+            <div
+              class="card-sidebar-dx-right d-flex flex-column justify-content-around"
+            >
+              <div class="bars w-100 rounded-5"></div>
+              <div class="bars w-75 rounded-5"></div>
+              <div class="bars w-75 rounded-5"></div>
+            </div>
+          </div>
+
+          <div class="card-sidebar-dx d-flex align-items-center">
+            <div
+              class="card-sidebar-dx-left align-items-center justify-content-center rounded-circle mx-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="currentColor"
+                class="bi bi-person"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"
+                />
+              </svg>
+            </div>
+            <div
+              class="card-sidebar-dx-right d-flex flex-column justify-content-around"
+            >
+              <div class="bars w-100 rounded-5"></div>
+              <div class="bars w-75 rounded-5"></div>
+              <div class="bars w-75 rounded-5"></div>
+            </div>
+          </div>
+
+          <div class="card-sidebar-dx d-flex align-items-center">
+            <div
+              class="card-sidebar-dx-left align-items-center justify-content-center rounded-circle mx-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="currentColor"
+                class="bi bi-person"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"
+                />
+              </svg>
+            </div>
+            <div
+              class="card-sidebar-dx-right d-flex flex-column justify-content-around"
+            >
+              <div class="bars w-100 rounded-5"></div>
+              <div class="bars w-75 rounded-5"></div>
+              <div class="bars w-75 rounded-5"></div>
             </div>
           </div>
         </div>
